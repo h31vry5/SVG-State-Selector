@@ -12,38 +12,38 @@ gulp.task('scss', async function () {
     .pipe(sass.sync({
       includePaths: ['node_modules']
     }).on('error', sass.logError))
-    .pipe(gulp.dest('./public_html/dist/styles'))
+    .pipe(gulp.dest('./docs/dist/styles'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('js', function () {
   return gulp.src("./src/js/*.js")
     .pipe(babel())
-    .pipe(gulp.dest("./public_html/dist/js"));
+    .pipe(gulp.dest("./docs/dist/js"));
 });
 
 gulp.task('img', function() {
   return gulp.src('./src/imgs/*')
-  .pipe(gulp.dest('./public_html/dist/imgs'))
+  .pipe(gulp.dest('./docs/dist/imgs'))
 })
 
 gulp.task('json', function() {
   return gulp.src('./src/data/*.json')
-  .pipe(gulp.dest('./public_html/dist/data'))
+  .pipe(gulp.dest('./docs/dist/data'))
 })
 
 gulp.task('modules', function() {
   sources = [
     './node_modules/external-svg-loader/dist/svg-loader.min.js'
   ]
-  
+
   return gulp.src( sources )
-  .pipe(gulp.dest('./public_html/dist/modules/'));
+  .pipe(gulp.dest('./docs/dist/modules/'));
 });
 
 
 gulp.task('clean', function(){
-  return clean('./public_html/dist/**', {force:true});
+  return clean('./docs/dist/**', {force:true});
 });
 
 gulp.task('watch', async function () {
@@ -56,7 +56,7 @@ gulp.task('watch', async function () {
 gulp.task('browser-sync', function() {
     browserSync.init({
       server: {
-        baseDir: "./public_html"
+        baseDir: "./docs"
       }
     });
 
