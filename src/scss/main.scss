@@ -16,11 +16,11 @@ body{
 
     #map{
       &.AL{
-          svg{
-              #AL{
-                  fill: $active_color;
-              }
-          }
+        svg{
+            #AL{
+                fill: $active_color;
+            }
+        }
       }
       &.WA{
         svg{
@@ -48,6 +48,7 @@ body{
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
+            cursor: pointer;
             &:hover{
                 background-color: $dark-green;
             }
