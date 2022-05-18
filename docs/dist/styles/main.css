@@ -12,6 +12,9 @@ body {
 .container #map.AL svg #AL {
   fill: #000000;
 }
+.container #map.WA svg #WA {
+  fill: #000000;
+}
 .container #button-grid {
   max-width: 800px;
   display: flex;

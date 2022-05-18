@@ -15,13 +15,20 @@ body{
     align-items: center;
 
     #map{
-        &.AL{
-            svg{
-                #AL{
-                    fill: $active_color;
-                }
-            }
+      &.AL{
+          svg{
+              #AL{
+                  fill: $active_color;
+              }
+          }
+      }
+      &.WA{
+        svg{
+          #WA{
+              fill: $active_color;
+          }
         }
+      }
     }
     #button-grid{
         max-width: 800px;
