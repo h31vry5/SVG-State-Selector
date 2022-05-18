@@ -1,0 +1,30 @@
+{
+  "name": "SVG-State-Selector",
+  "version": "1.0.0",
+  "description": "Demonstration of SVG's ID functionality with CSS selectors",
+  "main": "index.js",
+  "repository": "https://github.com/h31vry5/SVG-State-Selector.git",
+  "author": "Henry Park <H31vry5@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-json-editor": "^2.5.6",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.43.4",
+    "ts-node": "^10.4.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "del": "^6.0.0",
+    "external-svg-loader": "^1.4.1"
+  }
+}
