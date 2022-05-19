@@ -3,6 +3,9 @@ $green : #4CAF50;
 $dark-green: #347c36;
 $white: #FFFFFF;
 
+// List of States
+$states : "AL","AK","AS","AZ","AR","CA","CO","CT","DE","DC","FM","FL","GA","GU","HI","ID","IL","IN","IA","KS","KY","LA","ME","MH","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","MP","OH","OK","OR","PW","PA","RI","SC","SD","TN","TX","UT","VT","VI","VA","WA","WV","WI","WY";
+
 html,
 body{
     font-family: 'Courier New', Courier, monospace;
@@ -15,17 +18,12 @@ body{
     align-items: center;
 
     #map{
-      &.AL{
-        svg{
-            #AL{
+      @each $state in $states {
+        &.#{$state}{
+          svg{
+            ##{$state}{
                 fill: $active_color;
             }
-        }
-      }
-      &.WA{
-        svg{
-          #WA{
-              fill: $active_color;
           }
         }
       }
